@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Week7Day2.Models;
 
 namespace Week7Day2.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -26,5 +28,8 @@ namespace Week7Day2.Controllers
 
             return View();
         }
+        
+
+        
     }
 }

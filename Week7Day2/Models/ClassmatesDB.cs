@@ -13,19 +13,23 @@ namespace Week7Day2.Models
         // If you wish to target a different database and/or database provider, modify the 'ClassmatesDB' 
         // connection string in the application configuration file.
         public ClassmatesDB()
-            : base("name=ClassmatesDB")
+            : base("name=ClassmatesDB1")
         {
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-        // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public virtual DbSet<Classmate> Classmates { get; set; }
     }
 
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
+    public class Classmate
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string School { get; set; }
+        public DateTime Graduation { get; set; }
+        public string Awards { get; set; }
+        public string Photo { get; set; }
+    }
 }
